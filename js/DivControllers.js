@@ -2953,6 +2953,7 @@ function ExportController(div, window, config) {
 			data: selectorData,
 			background: "white",
 			selectText: "...",
+			width:'100%',
 			defeaultSelectedIndex: null,
 			onSelected: function(selection) {
 				console.log("onSelected(" + selection + ")");
