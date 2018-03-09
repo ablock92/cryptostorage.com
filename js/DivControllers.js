@@ -2894,6 +2894,7 @@ function ExportController(div, window, config) {
 	var saveButton;
 	var printButton;
 	var savePublicButton;
+	var moreButton;
 	var showPublicCheckbox;
 	var showPrivateCheckbox;
 	var showLogosCheckbox;
@@ -2936,6 +2937,29 @@ function ExportController(div, window, config) {
 		printButton.html("Print All");
 		savePublicButton = $("<div class='export_button'>").appendTo(exportButtons);
 		savePublicButton.html("Save Public Addresses");
+		moreButton = $("<div id='more_button' class='export_button'>").appendTo(exportButtons);
+		moreButton.html("...");
+		
+		// more button drop down
+		var selectorData = [];
+		selectorData.push({
+			text: "Export as CSV"
+		});
+		selectorData.push({
+			text: "Export as TXT"
+		});
+		var selector = $("#more_button", div);	// ddslick requires id reference
+		selector.ddslick({
+			data: selectorData,
+			background: "white",
+			selectText: "...",
+			defeaultSelectedIndex: null,
+			onSelected: function(selection) {
+				console.log("onSelected(" + selection + ")");
+			}
+		});
+		selectedPlugin: null,
+		selector = $("#more_button", div);	// ddslick requires id reference
 		
 		// export checkboxes
 		var exportCheckboxes = $("<div class='export_checkboxes flex_horizontal'>").appendTo(exportControls);

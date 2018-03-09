@@ -171,7 +171,8 @@ var AppUtils = {
 			"js/DivControllers.js",
 			"js/CryptoPlugins.js",
 			"js/BodyExporter.js",
-			"lib/pagination.js"
+			"lib/pagination.js",
+			"lib/jquery.ddslick.js"
 		];
 	},
 	
